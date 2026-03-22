@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incorporate in Ontario in 1 Hour | AMQ Legals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0d1b3e;
+    --navy-mid:   #1a2d5a;
+    --navy-light: #2a4080;
+    --gold:       #c9a84c;
+    --gold-light: #e8d5a0;
+    --gold-dark:  #b8943e;
+    --white:      #ffffff;
+    --paper:      #f4f6f9;
+    --cream:      #f8f9fc;
+    --mist:       #e2e8f0;
+    --slate:      #64748b;
+    --ease:       0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+  /* ── TOP BAR ── */
+  .top-bar{background:var(--navy);color:rgba(255,255,255,.65);font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.05em;padding:8px 0}
+  .top-bar-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
+  .top-bar a{color:rgba(255,255,255,.65);text-decoration:none}
+  .top-bar a:hover{color:var(--gold-light)}
+  .top-bar-right{display:flex;gap:24px}
+
+  /* ── NAV ── */
+  nav{background:var(--white);border-bottom:1px solid var(--mist);position:sticky;top:0;z-index:100;box-shadow:0 1px 20px rgba(13,27,62,.07)}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;align-items:center;height:72px;gap:40px}
+  .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;letter-spacing:-.02em;flex-shrink:0}
+  .logo span{color:var(--gold)}
+  .nav-links{display:flex;list-style:none;gap:4px;flex:1}
+  .nav-links>li{position:relative}
+  .nav-links>li>a{display:block;padding:8px 14px;font-size:13px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);text-decoration:none;border-radius:4px;transition:var(--ease)}
+  .nav-links>li>a:hover,.nav-links>li.active>a{background:var(--mist)}
+  .nav-links>li.active>a{color:var(--gold-dark);font-weight:600}
+  .dropdown{position:absolute;top:calc(100% + 8px);left:0;background:white;min-width:220px;border:1px solid var(--mist);box-shadow:0 8px 32px rgba(13,27,62,.1);border-radius:6px;padding:8px 0;opacity:0;pointer-events:none;transform:translateY(-8px);transition:var(--ease);z-index:200}
+  .nav-links>li:hover .dropdown{opacity:1;pointer-events:all;transform:translateY(0)}
+  .dropdown a{display:block;padding:9px 20px;font-size:13px;color:var(--navy);text-decoration:none;transition:var(--ease)}
+  .dropdown a:hover{background:var(--mist)}
+  .nav-cta{margin-left:auto;flex-shrink:0}
+
+  /* ── BUTTONS ── */
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:var(--ease);font-family:'DM Sans',sans-serif}
+  .btn-navy{background:var(--navy);color:white;border-color:var(--navy)}
+  .btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,27,62,.25)}
+  .btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+  .btn-gold:hover{background:var(--gold-dark);color:white;transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,168,76,.35)}
+  .btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:white}
+  .btn-outline-white{background:transparent;color:white;border-color:rgba(255,255,255,.4)}
+  .btn-outline-white:hover{background:white;color:var(--navy)}
+  .btn-sm{padding:8px 18px;font-size:12px}
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb{background:var(--white);border-bottom:1px solid var(--mist);padding:12px 0}
+  .bc-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:8px;font-size:12px;font-family:'DM Mono',monospace;color:var(--slate)}
+  .bc-inner a{color:var(--slate);text-decoration:none}
+  .bc-inner a:hover{color:var(--navy)}
+  .bc-sep{color:var(--mist)}
+  .bc-current{color:var(--gold-dark);font-weight:500}
+
+  /* ── HERO ── */
+  .hero{background:var(--navy);padding:72px 0 0;position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;opacity:.03;background-image:repeating-linear-gradient(90deg,white 0,white 1px,transparent 1px,transparent 72px),repeating-linear-gradient(0deg,white 0,white 1px,transparent 1px,transparent 72px)}
+  .hero-glow{position:absolute;top:-80px;right:-80px;width:520px;height:520px;background:radial-gradient(circle,rgba(201,168,76,.14) 0%,transparent 70%);pointer-events:none}
+  .hero-glow2{position:absolute;bottom:-60px;left:-60px;width:340px;height:340px;background:radial-gradient(circle,rgba(42,64,128,.25) 0%,transparent 70%);pointer-events:none}
+  .hero-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:end;position:relative;z-index:2}
+
+  .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold-light);padding:5px 14px;border-radius:100px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;animation:fadeUp .5s ease both}
+  .hero-tag-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+  .hero-title{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,62px);font-weight:700;color:white;line-height:1.08;letter-spacing:-.02em;margin-bottom:18px;animation:fadeUp .5s .1s ease both}
+  .hero-title em{font-style:italic;color:var(--gold-light)}
+  .hero-sub{font-size:16px;color:rgba(255,255,255,.62);line-height:1.72;max-width:520px;margin-bottom:36px;animation:fadeUp .5s .2s ease both}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px;animation:fadeUp .5s .3s ease both}
+
+  .hero-stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;animation:fadeUp .5s .4s ease both}
+  .hstat{padding:18px 20px;background:rgba(255,255,255,.04);border-right:1px solid rgba(255,255,255,.08);text-align:center}
+  .hstat:last-child{border-right:none}
+  .hstat-val{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold-light);line-height:1}
+  .hstat-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px;font-family:'DM Mono',monospace;letter-spacing:.04em}
+
+  /* hero right — cert preview card */
+  .hero-cert-card{background:white;border-radius:12px 12px 0 0;padding:28px;box-shadow:0 -8px 48px rgba(0,0,0,.2);animation:fadeIn .7s .2s ease both;align-self:end}
+  .cert-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  .cert-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy)}
+  .cert-badge{background:rgba(201,168,76,.12);color:var(--gold-dark);font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;border:1px solid rgba(201,168,76,.25)}
+  .cert-preview{background:var(--paper);border:1px solid var(--mist);border-radius:6px;padding:20px;text-align:center;margin-bottom:18px;position:relative;overflow:hidden}
+  .cert-preview::before{content:'CERTIFICATE OF INCORPORATION';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-20deg);font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.12em;color:rgba(13,27,62,.06);white-space:nowrap;font-weight:700;pointer-events:none}
+  .cert-doc-icon{font-size:52px;margin-bottom:10px}
+  .cert-doc-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
+  .cert-doc-sub{font-size:11px;color:var(--slate);font-family:'DM Mono',monospace}
+  .cert-items{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+  .cert-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--navy)}
+  .cert-item-icon{color:var(--gold-dark);font-size:14px;flex-shrink:0}
+  .cert-price-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--navy);border-radius:6px;margin-bottom:14px}
+  .cert-price-label{font-size:12px;color:rgba(255,255,255,.6)}
+  .cert-price-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold-light)}
+  .cert-price-note{font-size:10px;color:rgba(255,255,255,.4);font-family:'DM Mono',monospace}
+  .cert-card .btn{width:100%;justify-content:center;margin-bottom:8px}
+  .cert-timing{text-align:center;font-size:12px;color:var(--slate);display:flex;align-items:center;justify-content:center;gap:6px}
+  .cert-timing strong{color:var(--gold-dark)}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  /* ── LAYOUT HELPERS ── */
+  .section{padding:80px 0}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  .section-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;display:flex;align-items:center;gap:12px}
+  .section-label::before{content:'';display:block;width:28px;height:2px;background:var(--gold)}
+  .section-label.center{justify-content:center}
+  .section-label.center::before{display:none}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:700;color:var(--navy);line-height:1.15;letter-spacing:-.02em}
+  .section-title em{font-style:italic;color:var(--gold-dark)}
+  .section-desc{font-size:16px;color:var(--slate);line-height:1.72;max-width:600px;margin-top:12px}
+
+  /* ── PACKAGES ── */
+  .packages-section{background:var(--white)}
+  .pkg-intro{max-width:680px;margin-bottom:56px}
+  .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pkg-card{border:1px solid var(--mist);border-radius:10px;overflow:hidden;transition:var(--ease);display:flex;flex-direction:column;background:white;position:relative}
+  .pkg-card:hover{border-color:var(--gold);box-shadow:0 12px 40px rgba(13,27,62,.1);transform:translateY(-4px)}
+  .pkg-card.featured{border-color:var(--gold);box-shadow:0 8px 32px rgba(201,168,76,.2)}
+  .pkg-card-top{padding:28px 28px 0}
+  .pkg-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px;font-weight:600}
+  .pkg-badge.rush{background:rgba(201,168,76,.12);color:var(--gold-dark);border:1px solid rgba(201,168,76,.3)}
+  .pkg-icon{font-size:32px;margin-bottom:14px}
+  .pkg-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
+  .pkg-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+  .pkg-price{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--navy)}
+  .pkg-price sup{font-size:18px;vertical-align:super}
+  .pkg-price-note{font-size:12px;color:var(--slate)}
+  .pkg-timing{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gold-dark);font-weight:600;font-family:'DM Mono',monospace;letter-spacing:.03em;margin-bottom:20px}
+  .pkg-divider{height:1px;background:var(--mist);margin:0 28px}
+  .pkg-features{padding:20px 28px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .pkg-feature{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--navy)}
+  .pkg-feature-icon{color:var(--gold-dark);flex-shrink:0;margin-top:2px}
+  .pkg-footer{padding:20px 28px 28px}
+  .pkg-footer .btn{width:100%;justify-content:center}
+
+  /* ── REQUIREMENTS ── */
+  .req-section{background:var(--paper)}
+  .req-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:48px}
+  .req-list{display:flex;flex-direction:column;gap:0}
+  .req-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--mist)}
+  .req-item:last-child{border-bottom:none}
+  .req-num{width:34px;height:34px;border-radius:50%;background:var(--navy);color:white;font-family:'DM Mono',monospace;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .req-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px}
+  .req-desc{font-size:13.5px;color:var(--slate);line-height:1.65}
+  .req-highlight{background:var(--navy);border-radius:12px;padding:40px;color:white}
+  .req-highlight-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:white;margin-bottom:24px;line-height:1.25}
+  .req-highlight-title em{color:var(--gold-light);font-style:italic}
+  .req-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:8px;overflow:hidden;margin-bottom:28px}
+  .req-stat{background:rgba(255,255,255,.06);padding:18px 16px}
+  .req-stat-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold-light)}
+  .req-stat-lbl{font-size:11px;color:rgba(255,255,255,.5);font-family:'DM Mono',monospace;letter-spacing:.04em;margin-top:3px}
+  .req-highlight .btn{width:100%;justify-content:center}
+
+  /* ── COMPARE ── */
+  .compare-section{background:var(--navy);padding:80px 0}
+  .compare-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:center}
+  .compare-left .section-label{color:var(--gold-light)}
+  .compare-left .section-label::before{background:var(--gold)}
+  .compare-left .section-title{color:white}
+  .compare-left .section-desc{color:rgba(255,255,255,.6);max-width:100%}
+  .compare-table{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden}
+  .compare-head{display:grid;grid-template-columns:1fr 80px 80px;padding:14px 24px;background:rgba(255,255,255,.08);font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .col-amq{color:var(--gold-light);font-weight:600;text-align:center}
+  .col-gov{color:rgba(255,255,255,.4);font-weight:600;text-align:center}
+  .compare-row{display:grid;grid-template-columns:1fr 80px 80px;padding:15px 24px;align-items:center;border-top:1px solid rgba(255,255,255,.06)}
+  .compare-row:nth-child(even){background:rgba(255,255,255,.02)}
+  .compare-feat{font-size:13.5px;color:rgba(255,255,255,.8)}
+  .chk-yes{color:#34d399;text-align:center;font-size:16px}
+  .chk-no{color:rgba(255,255,255,.2);text-align:center;font-size:20px}
+
+  /* ── WHY US ── */
+  .why-section{background:var(--white)}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+  .why-card{background:var(--paper);border:1px solid var(--mist);border-radius:8px;padding:30px;transition:var(--ease)}
+  .why-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(13,27,62,.07)}
+  .why-card-icon{font-size:28px;margin-bottom:14px}
+  .why-card-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:8px}
+  .why-card-desc{font-size:13.5px;color:var(--slate);line-height:1.68}
+
+  /* ── HOW IT WORKS ── */
+  .how-section{background:var(--paper)}
+  .steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:56px}
+  .steps-row::before{content:'';position:absolute;top:35px;left:calc(16.67% + 35px);right:calc(16.67% + 35px);height:2px;background:linear-gradient(90deg,var(--gold) 0%,var(--navy-light) 100%)}
+  .step{padding:0 40px;text-align:center;position:relative;z-index:1}
+  .step-circle{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;box-shadow:0 0 0 8px var(--paper),0 0 0 9px var(--mist)}
+  .step:nth-child(1) .step-circle{background:var(--navy);color:white}
+  .step:nth-child(2) .step-circle{background:var(--navy-mid);color:white}
+  .step:nth-child(3) .step-circle{background:var(--gold);color:var(--navy)}
+  .step-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:var(--navy);margin-bottom:12px}
+  .step-desc{font-size:14px;color:var(--slate);line-height:1.7}
+
+  /* ── FAQ ── */
+  .faq-section{background:var(--white)}
+  .faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+  .faq-item{background:var(--paper);border:1px solid var(--mist);border-radius:8px;overflow:hidden;transition:var(--ease)}
+  .faq-item:hover{border-color:var(--gold)}
+  .faq-item.open{border-color:var(--gold);box-shadow:0 4px 16px rgba(13,27,62,.07)}
+  .faq-q{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--navy)}
+  .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--gold-dark);flex-shrink:0;transition:var(--ease);font-family:monospace;font-weight:bold}
+  .faq-item.open .faq-toggle{background:var(--gold);color:var(--navy);transform:rotate(45deg)}
+  .faq-a{padding:0 24px 18px;font-size:13.5px;color:var(--slate);line-height:1.72;display:none}
+  .faq-item.open .faq-a{display:block}
+
+  /* ── CTA BANNER ── */
+  .cta-section{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:80px 0;position:relative;overflow:hidden}
+  .cta-section::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 65%)}
+  .cta-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:48px;position:relative;z-index:2}
+  .cta-text h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:white;line-height:1.2;margin-bottom:10px}
+  .cta-text h2 em{font-style:italic;color:var(--gold-light)}
+  .cta-text p{font-size:16px;color:rgba(255,255,255,.6);max-width:480px}
+  .cta-actions{display:flex;gap:14px;flex-shrink:0}
+
+  /* ── FOOTER ── */
+  footer{background:var(--navy);color:rgba(255,255,255,.65);padding:60px 0 28px}
+  .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .footer-brand .logo{color:white;display:block;margin-bottom:14px}
+  .footer-brand p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);margin-bottom:20px}
+  .footer-contact{display:flex;flex-direction:column;gap:8px}
+  .footer-contact-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.55)}
+  .fci{color:var(--gold)}
+  .footer-col h4{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:16px}
+  .footer-col ul{list-style:none}
+  .footer-col ul li{margin-bottom:8px}
+  .footer-col ul li a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:var(--ease)}
+  .footer-col ul li a:hover{color:white}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-size:12px;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:14px}
+  .footer-legal{display:flex;gap:20px}
+  .footer-legal a{color:rgba(255,255,255,.3);text-decoration:none;font-size:12px}
+  .footer-legal a:hover{color:rgba(255,255,255,.7)}
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:1024px){
+    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .hero-cert-card{max-width:460px}
+    .hero-stats-bar{grid-template-columns:repeat(2,1fr)}
+    .packages-grid{grid-template-columns:repeat(2,1fr)}
+    .req-layout{grid-template-columns:1fr}
+    .compare-inner{grid-template-columns:1fr;gap:40px}
+    .why-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:768px){
+    .packages-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+    .steps-row{grid-template-columns:1fr;gap:36px}
+    .steps-row::before{display:none}
+    .faq-cols{grid-template-columns:1fr}
+    .footer-top{grid-template-columns:1fr 1fr;gap:36px}
+    .cta-inner{flex-direction:column;text-align:center}
+    .nav-links{display:none}
+    .hero-stats-bar{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:480px){
+    .footer-top{grid-template-columns:1fr}
+    .wrap,.nav-inner,.top-bar-inner,.bc-inner,.hero-inner,.compare-inner,.cta-inner{padding-left:20px;padding-right:20px}
+    .hero-stats-bar{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span>Certified Liaison — Province of Ontario</span>
+    <div class="top-bar-right">
+      <a href="tel:7802978924">☎ (780) 297-8924</a>
+      <a href="mailto:info@amqlegals.ca">✉ info@amqlegals.ca</a>
+      <a href="#">About Us</a>
+      <a href="#">Help Centre</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">AMQ <span>Legals</span></a>
+    <ul class="nav-links">
+      <li class="active">
+        <a href="#">Corporation ▾</a>
+        <div class="dropdown">
+          <a href="#">Standard Corporation</a>
+          <a href="#">Professional Corporation</a>
+          <a href="#">Holding Company</a>
+          <a href="#">Co-op Corporation</a>
+          <a href="#">Personal Real Estate Corp.</a>
+          <a href="#">E-Commerce Company</a>
+        </div>
+      </li>
+      <li><a href="#">Non-Profit ▾</a></li>
+      <li><a href="#">Business Ops ▾</a></li>
+      <li><a href="#">Filings ▾</a></li>
+      <li><a href="#">Trademark ▾</a></li>
+      <li><a href="#">Foreigners</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-navy">Incorporate Now →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="#">Home</a>
+    <span class="bc-sep">›</span>
+    <a href="#">Corporation</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current">Ontario Incorporation</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="hero-tag-dot"></div> Ontario Business Registry — Express Filing</div>
+      <h1 class="hero-title">Incorporate in<br><em>Ontario</em> in 1 Hour</h1>
+      <p class="hero-sub">Online filing handled by legal experts. Transparent pricing. No phone queues or paperwork headaches. Get your Certificate of Incorporation delivered to your inbox the same day.</p>
+      <div class="hero-actions">
+        <a href="#packages" class="btn btn-gold">See Packages →</a>
+        <a href="#how" class="btn btn-outline-white">How It Works</a>
+      </div>
+      <div class="hero-stats-bar">
+        <div class="hstat">
+          <div class="hstat-val">1 hr</div>
+          <div class="hstat-label">Rush Filing Option</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-val">$300</div>
+          <div class="hstat-label">Govt. Fee Included</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-val">8,630+</div>
+          <div class="hstat-label">Clients Served</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-val">4.9★</div>
+          <div class="hstat-label">1,220+ Reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate Preview Card -->
+    <div class="hero-cert-card">
+      <div class="cert-header">
+        <div class="cert-title">What You'll Receive</div>
+        <div class="cert-badge">⚡ Same Day</div>
+      </div>
+      <div class="cert-preview">
+        <div class="cert-doc-icon">📄</div>
+        <div class="cert-doc-name">Certificate of Incorporation</div>
+        <div class="cert-doc-sub">Ontario — Business Corporations Act</div>
+      </div>
+      <div class="cert-items">
+        <div class="cert-item"><span class="cert-item-icon">✓</span> Articles of Incorporation</div>
+        <div class="cert-item"><span class="cert-item-icon">✓</span> NUANS Name Search Report</div>
+        <div class="cert-item"><span class="cert-item-icon">✓</span> Corporate Bylaws &amp; Resolutions</div>
+        <div class="cert-item"><span class="cert-item-icon">✓</span> Share Structure &amp; Minutes</div>
+        <div class="cert-item"><span class="cert-item-icon">✓</span> Digital + Hard Copy Delivery</div>
+      </div>
+      <div class="cert-price-row">
+        <div>
+          <div class="cert-price-label">Starting from</div>
+          <div class="cert-price-note">Govt. fee included</div>
+        </div>
+        <div class="cert-price-val">$300</div>
+      </div>
+      <a href="#" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:10px">Incorporate Now →</a>
+      <div class="cert-timing">⚡ Delivered within <strong>&nbsp;1 business hour</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section packages-section" id="packages">
+  <div class="wrap">
+    <div class="pkg-intro">
+      <div class="section-label">Ontario Packages</div>
+      <h2 class="section-title">Choose Your <em>Incorporation Type</em></h2>
+      <p class="section-desc">Every package includes name confirmation, articles of incorporation, and same-day electronic document delivery through the Ontario Business Registry. Government fees included.</p>
+    </div>
+    <div class="packages-grid">
+
+      <!-- Standard -->
+      <div class="pkg-card featured">
+        <div class="pkg-card-top">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-icon">🏢</div>
+          <div class="pkg-name">Ontario Standard Corporation</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Articles of Incorporation filed</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> NUANS name search &amp; approval</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Numbered or named corporation</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Lowest combined corporate tax rates</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-gold">Incorporate Now →</a>
+        </div>
+      </div>
+
+      <!-- Professional -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-badge rush">Rush Ready</div>
+          <div class="pkg-icon">⚖️</div>
+          <div class="pkg-name">Ontario Professional Corporation</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> For doctors, lawyers, accountants</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Regulatory compliance included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Numbered or named corporation</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Lower personal tax through corp.</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-navy">Incorporate Now →</a>
+        </div>
+      </div>
+
+      <!-- Not-for-Profit -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-badge rush">Rush Ready</div>
+          <div class="pkg-icon">🤝</div>
+          <div class="pkg-name">Ontario Not-for-Profit Corporation</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Ontario Not-for-Profit Act filing</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Purpose clause drafting</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Min. 3 directors supported</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Eligibility for charitable status</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-navy">Incorporate Now →</a>
+        </div>
+      </div>
+
+      <!-- Holding -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-badge rush">Rush Ready</div>
+          <div class="pkg-icon">🏦</div>
+          <div class="pkg-name">Ontario Holding Company</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Asset protection structure</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Tax planning &amp; income splitting</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Numbered or named corporation</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Intercorporate dividend flow</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-navy">Incorporate Now →</a>
+        </div>
+      </div>
+
+      <!-- Co-op -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-badge rush">Rush Ready</div>
+          <div class="pkg-icon">🌐</div>
+          <div class="pkg-name">Ontario Co-operative Incorporation</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Member-owned structure</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Democratic governance rules</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Profit &amp; non-profit versions</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Co-operative bylaws drafted</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-navy">Incorporate Now →</a>
+        </div>
+      </div>
+
+      <!-- PREC -->
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <div class="pkg-badge rush">Rush Ready</div>
+          <div class="pkg-icon">🏡</div>
+          <div class="pkg-name">Personal Real Estate Corporation</div>
+          <div class="pkg-price-row">
+            <div class="pkg-price"><sup>$</sup>300</div>
+            <div class="pkg-price-note">govt. fee included</div>
+          </div>
+          <div class="pkg-timing">⚡ Rush: typically 30 minutes</div>
+        </div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> For licensed REALTORS®</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Income tax deferral benefits</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Controlling shareholder structure</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Brokerage-compliant setup</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Expert legal review included</div>
+          <div class="pkg-feature"><span class="pkg-feature-icon">✓</span> Digital documents emailed same day</div>
+        </div>
+        <div class="pkg-footer">
+          <a href="#" class="btn btn-navy">Incorporate Now →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="section req-section">
+  <div class="wrap">
+    <div class="section-label">What You'll Need</div>
+    <h2 class="section-title">Requirements to <em>Incorporate in Ontario</em></h2>
+    <div class="req-layout">
+      <div class="req-list">
+        <div class="req-item">
+          <div class="req-num">01</div>
+          <div>
+            <div class="req-title">Business Activities (NAICS Code)</div>
+            <p class="req-desc">A description of your primary business activities and the corresponding NAICS industry code. We'll help you identify the right code if you're unsure.</p>
+          </div>
+        </div>
+        <div class="req-item">
+          <div class="req-num">02</div>
+          <div>
+            <div class="req-title">Director Names &amp; Addresses</div>
+            <p class="req-desc">Full legal names and addresses for all directors. Worldwide addresses are accepted. At least one director must be 18+ years old. No Canadian residency required for Ontario corporations.</p>
+          </div>
+        </div>
+        <div class="req-item">
+          <div class="req-num">03</div>
+          <div>
+            <div class="req-title">Registered Ontario Address</div>
+            <p class="req-desc">A physical address in Ontario is required as the registered office. PO boxes are not accepted. AMQ Legals offers an address &amp; mail-forwarding service if needed.</p>
+          </div>
+        </div>
+        <div class="req-item">
+          <div class="req-num">04</div>
+          <div>
+            <div class="req-title">Valid NUANS Report (Named Corps)</div>
+            <p class="req-desc">A NUANS name search report is mandatory for named corporations to confirm your business name is unique. This is included in all AMQ Legals packages. Numbered corporations skip this step.</p>
+          </div>
+        </div>
+        <div class="req-item">
+          <div class="req-num">05</div>
+          <div>
+            <div class="req-title">Desired Incorporation Date</div>
+            <p class="req-desc">Choose today's date for immediate incorporation, or a future date if you need to plan your business launch. We'll file on schedule.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="req-highlight">
+        <div class="req-highlight-title">Fast, Compliant &amp;<br><em>Completely Paper-Free</em></div>
+        <div class="req-stats">
+          <div class="req-stat">
+            <div class="req-stat-val">1 hr</div>
+            <div class="req-stat-lbl">Rush Service</div>
+          </div>
+          <div class="req-stat">
+            <div class="req-stat-val">8,630+</div>
+            <div class="req-stat-lbl">Customers Served</div>
+          </div>
+          <div class="req-stat">
+            <div class="req-stat-val">100%</div>
+            <div class="req-stat-lbl">Satisfaction Guarantee</div>
+          </div>
+          <div class="req-stat">
+            <div class="req-stat-val">100%</div>
+            <div class="req-stat-lbl">In-House Legal Review</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:28px">We file through the Ontario Business Registry and email your Articles and Certificate the same day — so you can open a business bank account right away.</p>
+        <a href="#" class="btn btn-gold">Start Your Incorporation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="compare-left">
+      <div class="section-label">Why AMQ Legals</div>
+      <h2 class="section-title" style="color:white;">More Than Just <em>Government Filing</em></h2>
+      <p class="section-desc" style="color:rgba(255,255,255,.6);max-width:100%">We go far beyond what the government portal offers — with expert review, bundled documents, instant support, and guided setup from start to finish.</p>
+      <div style="margin-top:32px">
+        <a href="#" class="btn btn-gold">View Our Packages →</a>
+      </div>
+    </div>
+    <div class="compare-table">
+      <div class="compare-head">
+        <span>Feature</span>
+        <span class="col-amq">AMQ</span>
+        <span class="col-gov">Govt.</span>
+      </div>
+      <div class="compare-row"><span class="compare-feat">Incorporation Government Filings</span><span class="chk-yes">✓</span><span class="chk-yes">✓</span></div>
+      <div class="compare-row"><span class="compare-feat">Unlimited Business Name Searches</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+      <div class="compare-row"><span class="compare-feat">Bundled Registration Documents</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+      <div class="compare-row"><span class="compare-feat">Instant Expert Helpline</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+      <div class="compare-row"><span class="compare-feat">Guided, Easy Setup Process</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+      <div class="compare-row"><span class="compare-feat">In-House Legal Counsel Review</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+      <div class="compare-row"><span class="compare-feat">Same-Day Rush Processing</span><span class="chk-yes">✓</span><span class="chk-no">—</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section">
+  <div class="wrap">
+    <div class="section-label">Our Advantages</div>
+    <h2 class="section-title">The <em>1-Hour Ontario Incorporation</em> Advantage</h2>
+    <p class="section-desc">At AMQ Legals, we simplify every step — from business name search to articles of incorporation — so you can focus on building your business.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">🏛️</div>
+        <div class="why-card-title">Authorized Ontario Filing Agent</div>
+        <p class="why-card-desc">As a verified filing agent with secure government registry access, we process your incorporation directly through Ontario's online system for faster, more reliable results.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🔍</div>
+        <div class="why-card-title">Instant NUANS Name Search</div>
+        <p class="why-card-desc">We run a real-time NUANS name report and confirm availability immediately, helping you avoid delays and register your chosen business name without surprises.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">📋</div>
+        <div class="why-card-title">Professionally Reviewed Articles</div>
+        <p class="why-card-desc">Your documents are prepared and reviewed by experienced legal and corporate professionals to ensure full compliance with Ontario's Business Corporations Act.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">📧</div>
+        <div class="why-card-title">Documents Delivered in 1–2 Hours</div>
+        <p class="why-card-desc">Once approved, your official Certificate of Incorporation and all documents are emailed within one to two hours — no waiting, no follow-up calls required.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">💲</div>
+        <div class="why-card-title">Transparent, All-In Pricing</div>
+        <p class="why-card-desc">Government filing fees are included in your package price — no surprise charges at checkout. What you see is exactly what you pay.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🔒</div>
+        <div class="why-card-title">100% Satisfaction Guarantee</div>
+        <p class="why-card-desc">We stand behind every filing. If anything is incorrect due to an error on our part, we'll fix it at no additional cost — no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section" id="how">
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="section-label center">How It Works</div>
+      <h2 class="section-title" style="text-align:center">Just <em>3 Simple Steps</em></h2>
+      <p class="section-desc" style="text-align:center;margin:12px auto 0">Our streamlined process takes the complexity out of Ontario incorporation.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Answer Questions</div>
+        <p class="step-desc">Fill out our simple online form with your business details — name, directors, address, and activities. No legal knowledge required. It takes under 10 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Expert Preparation</div>
+        <p class="step-desc">Our legal team reviews your submission, runs the NUANS report, prepares your Articles of Incorporation, and files everything directly with the Ontario Business Registry.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Receive Your Documents</div>
+        <p class="step-desc">Your Certificate of Incorporation, Articles, and all corporate documents are delivered to your email within 1–2 hours. Ready to use immediately — open a bank account the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="wrap">
+    <div class="section-label">FAQs</div>
+    <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    <p class="section-desc">Everything you need to know about incorporating in Ontario with AMQ Legals.</p>
+    <div class="faq-cols">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          What is the process for incorporating in Ontario?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">Incorporating in Ontario involves choosing a business name, filing Articles of Incorporation with the Ontario Business Registry, and fulfilling legal and tax requirements. AMQ Legals handles this entire process — from name search to document delivery — ensuring full compliance with provincial regulations.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          How much does it cost to incorporate in Ontario?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">AMQ Legals packages start at $300, with government filing fees included. There are no hidden charges. The price covers name search, articles preparation, legal review, and same-day document delivery.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          How long does incorporation take with AMQ Legals?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">With our rush service, incorporation can be completed in as little as 30 minutes to 1 hour. Standard processing is typically completed the same business day. Timing depends on the type (numbered vs. named) and required government approvals.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Do I need a lawyer to incorporate in Ontario?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">While hiring a lawyer is not mandatory, having legal professionals review your documents helps prevent errors. AMQ Legals includes an in-house legal review with every package, ensuring your documents are fully compliant without the cost of hiring a private lawyer.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Can a non-resident incorporate a business in Ontario?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">Yes. Unlike federal incorporation, Ontario does not require any directors to be Canadian residents. Non-residents can fully incorporate an Ontario company. AMQ Legals specializes in helping international entrepreneurs set up Canadian businesses.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Federal vs. provincial incorporation — which is better?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">Provincial (Ontario) incorporation lets you operate primarily within the province at lower cost. Federal incorporation lets you operate across all of Canada under one registration, but requires at least 25% Canadian resident directors. AMQ Legals helps you choose the best option for your business goals.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Do I need a NUANS report to incorporate in Ontario?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">Yes, if you're registering a named corporation. The NUANS report confirms your business name is unique and available. It is included in all AMQ Legals packages. If you choose a numbered corporation, no name search is required.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          What are the ongoing requirements after incorporation?
+          <span class="faq-toggle">+</span>
+        </div>
+        <p class="faq-a">After incorporation, you must file an Initial Return within 60 days, file Annual Returns each year, maintain a registered Ontario office address, and update director or officer changes with the registry. AMQ Legals offers ongoing compliance services to keep your corporation in good standing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Ready to Incorporate Your<br><em>Ontario Business?</em></h2>
+      <p>Speedy, compliant, and completely online. Get your Certificate of Incorporation in as little as 1 hour — with expert legal review included.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-gold">Incorporate Now →</a>
+      <a href="#" class="btn btn-outline-white">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">AMQ <span>Legals</span></a>
+        <p>AMQ Legals specializes in seamless company incorporation across Canada — fast, accurate, and stress-free. With 100% end-to-end support, focus on your business while we handle the legal groundwork.</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><span class="fci">✉</span> info@amqlegals.ca</div>
+          <div class="footer-contact-item"><span class="fci">☎</span> (780) 297-8924</div>
+          <div class="footer-contact-item"><span class="fci">📍</span> 1 Concorde Gate, North York, ON M3C 3N6</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Ontario Services</h4>
+        <ul>
+          <li><a href="#">Standard Corporation</a></li>
+          <li><a href="#">Professional Corporation</a></li>
+          <li><a href="#">Holding Company</a></li>
+          <li><a href="#">Not-for-Profit</a></li>
+          <li><a href="#">Co-operative</a></li>
+          <li><a href="#">Personal Real Estate Corp.</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Services</h4>
+        <ul>
+          <li><a href="#">NUANS Name Search</a></li>
+          <li><a href="#">Trademark Registration</a></li>
+          <li><a href="#">Annual Return Filing</a></li>
+          <li><a href="#">CRA Account Setup</a></li>
+          <li><a href="#">Business for Foreigners</a></li>
+          <li><a href="#">All Provinces →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AMQ Legals. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
